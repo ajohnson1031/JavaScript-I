@@ -141,6 +141,7 @@ inventory.forEach(element => {
 
 console.log(accord);
 
+//Filter Experimentation
 let newOldCars = [];
 const jankyoldbiddy = inventory.filter(car => {
   return car.car_year < 2002;
@@ -153,3 +154,18 @@ jankyoldbiddy.forEach(element => {
 newOldCars.sort();
 
 console.log(`These were the janky years... ${newOldCars}`);
+
+//Filter Experimentation II
+
+let noobs = [];
+const youngun = inventory.filter(elem => {
+  return elem.car_year >= 2003;
+});
+
+for (car of youngun) {
+  noobs.push(car.car_year);
+}
+
+noobs.sort();
+
+console.log(`Fresh off the line!!! - ${noobs}`);
